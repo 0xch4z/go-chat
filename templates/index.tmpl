@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Room {{.room_id}}</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <div id="app" room-id="{{.room_id}}" user-id="{{.user_id}}">
+    <h1 id="heading">Welcome to room {{.room_id}}</h1>
+    <div id="messages">
+      {{range .initial_messages}}
+        {{.}}
+        <br />
+      {{end}}
+    </div>
+    <form id="chat-form">
+      User:
+      <input
+        id="user-form"
+        name="user"
+      ></input>
+      Message:
+      <input
+        id="message-form"
+        name="message"
+      ></input>
+      <input
+        type="submit"
+        value="Submit"
+      />
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/static/main.js"></script>
+</body>
+</html>

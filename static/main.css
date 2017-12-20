@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html {
+  font-family: 'Quicksand', helvetica-neue, sans;
+}
+
+#heading {
+  text-align: center;
+}
